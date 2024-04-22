@@ -13,17 +13,17 @@ y = np.linspace(-1, 1, 150)
 x, y = np.meshgrid(x, y)
 z = np.sin(np.sqrt(x ** 2 + y ** 2))
 
-# Defining the Colors of Anime Images
+# Define the Colors of Anime Images
 colors = np.sin(np.arctan2(y, x))
 
-# 绘制三维动漫形象
+# Adjust graphic perspective and display range
 surf = ax.plot_surface(x, y, z, facecolors=cm.jet(colors), linewidth=0, antialiased=False)
 
-# 调整图形视角和显示范围
+# Adjust graphic perspective and display range
 ax.view_init(elev=30, azim=45)
 ax.set_xlim([-1, 1])
 ax.set_ylim([-1, 1])
 ax.set_zlim([-1, 1])
 
-# 显示图形
+# Display graphics
 plt.show()
